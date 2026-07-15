@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 export default function HomePage() {
   return (
     <>
-      <section className="mx-auto flex min-h-[calc(100vh-150px)] max-w-6xl items-center px-6 py-20">
+      <section className="mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-20">
         <div className="max-w-4xl">
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             Software Development · Data Science · Artificial Intelligence

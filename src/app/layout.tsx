@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <ThemeProvider>
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex flex-1 flex-col">{children}</main>
           <SiteFooter />
         </ThemeProvider>
       </body>
