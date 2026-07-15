@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ProjectCard } from "@/components/projects/project-card";
 
 const projects = [
   {
@@ -17,10 +18,11 @@ const projects = [
   },
   {
     title: "Professional Portfolio",
-    category: "Software Engineering · In progress",
+    category: "Software Engineering",
     description:
       "This professional personal website, built to present my experience, projects, academic background and transition towards Data Science and AI.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    status: "In progress",
   },
 ];
 
@@ -60,33 +62,14 @@ export function FeaturedProjects() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {projects.map((project) => (
-            <article
+            <ProjectCard
               key={project.title}
-              className="border border-border bg-background p-8 transition-colors duration-200 hover:border-accent"
-            >
-              <p className="text-sm font-semibold text-accent">
-                {project.category}
-              </p>
-
-              <h3 className="mt-5 text-2xl font-semibold tracking-tight">
-                {project.title}
-              </h3>
-
-              <p className="mt-5 leading-7 text-muted">
-                {project.description}
-              </p>
-
-              <ul className="mt-8 flex flex-wrap gap-2">
-                {project.technologies.map((technology) => (
-                  <li
-                    key={technology}
-                    className="border border-border px-3 py-1 text-sm text-muted"
-                  >
-                    {technology}
-                  </li>
-                ))}
-              </ul>
-            </article>
+              title={project.title}
+              category={project.category}
+              description={project.description}
+              technologies={project.technologies}
+              status={project.status}
+            />
           ))}
         </div>
       </div>
