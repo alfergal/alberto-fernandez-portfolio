@@ -92,16 +92,78 @@ export default async function ProjectPage({
         </ul>
       </header>
 
-      <section className="mt-16 border-t border-border pt-10">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Project overview
-        </h2>
+      <div className="mt-16 space-y-16 border-t border-border pt-10">
+        {project.challenge && (
+          <section aria-labelledby="project-challenge">
+            <h2
+              id="project-challenge"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Challenge
+            </h2>
 
-        <p className="mt-5 max-w-3xl leading-8 text-muted">
-          The complete case study will include the problem, technical approach,
-          architecture, implementation process, results and relevant links.
-        </p>
-      </section>
+            <p className="mt-5 max-w-3xl leading-8 text-muted">
+              {project.challenge}
+            </p>
+          </section>
+        )}
+
+        {project.approach && (
+          <section aria-labelledby="technical-approach">
+            <h2
+              id="technical-approach"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Technical approach
+            </h2>
+
+            <ul className="mt-6 max-w-3xl space-y-4">
+              {project.approach.map((item) => (
+                <li
+                  key={item}
+                  className="border-l-2 border-accent pl-5 leading-7 text-muted"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {project.results && (
+          <section aria-labelledby="project-results">
+            <h2
+              id="project-results"
+              className="text-2xl font-semibold tracking-tight"
+            >
+              Results
+            </h2>
+
+            <ul className="mt-6 grid gap-4 md:grid-cols-2">
+              {project.results.map((result) => (
+                <li
+                  key={result}
+                  className="border border-border bg-surface p-6 leading-7 text-muted"
+                >
+                  {result}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {!project.challenge && !project.approach && !project.results && (
+          <section>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Project overview
+            </h2>
+
+            <p className="mt-5 max-w-3xl leading-8 text-muted">
+              The complete case study will be added soon.
+            </p>
+          </section>
+        )}
+      </div>
     </article>
   );
 }
