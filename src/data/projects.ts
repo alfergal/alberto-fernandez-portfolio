@@ -6,6 +6,8 @@ export type Project = {
   technologies: string[];
   status?: string;
   featured: boolean;
+  githubUrl?: string;
+  demoUrl?: string;
 };
 
 export const projects: Project[] = [
