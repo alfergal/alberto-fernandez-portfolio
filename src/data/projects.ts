@@ -95,6 +95,7 @@ export const projects: Project[] = [
     ],
     status: "In progress",
     featured: true,
+    githubUrl: "https://github.com/alfergal/alberto-fernandez-portfolio",
     challenge:
       "Build a professional personal website that clearly communicates my technical profile within a few seconds while remaining fast, accessible, responsive and easy to extend with new projects and professional content.",
     approach: [
@@ -115,6 +116,6 @@ export const projects: Project[] = [
       "Generated all current public routes as static content.",
       "Published the source code through a dedicated GitHub repository.",
       "Prepared the website for future deployment to IONOS and connection to a custom domain.",
-    ],
+    ]
   },
 ];

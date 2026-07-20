@@ -90,6 +90,35 @@ export default async function ProjectPage({
             </li>
           ))}
         </ul>
+
+        {(project.githubUrl || project.demoUrl) && (
+          <div className="mt-10 flex flex-wrap gap-4">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors duration-200 hover:bg-primary-hover hover:text-primary-hover-foreground"
+              >
+                View source code
+                <span aria-hidden="true">&nbsp;↗</span>
+              </a>
+            )}
+
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center border border-border bg-background px-6 py-3 font-medium text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface hover:text-accent"
+              >
+                View live demo
+                <span aria-hidden="true">&nbsp;↗</span>
+              </a>
+            )}
+          </div>
+        )}
+        
       </header>
 
       <div className="mt-16 space-y-16 border-t border-border pt-10">
