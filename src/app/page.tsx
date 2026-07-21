@@ -1,5 +1,9 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ProfessionalSummary } from "@/components/home/professional-summary";
+import { CurrentFocus } from "@/components/home/current-focus";
+import { TechnicalStack } from "@/components/home/technical-stack";
+import { HomeCta } from "@/components/home/home-cta";
 
 export default function HomePage() {
   return (
@@ -29,7 +33,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProfessionalSummary />
+
+      <CurrentFocus />
+
+      <TechnicalStack />
+
       <FeaturedProjects />
+
+      <HomeCta />
     </>
   );
 }
