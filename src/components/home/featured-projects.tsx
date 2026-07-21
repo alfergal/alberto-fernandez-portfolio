@@ -43,6 +43,7 @@ export function FeaturedProjects() {
             <ProjectCard
               key={project.slug}
               title={project.title}
+              slug={project.slug}
               category={project.category}
               description={project.description}
               technologies={project.technologies}
