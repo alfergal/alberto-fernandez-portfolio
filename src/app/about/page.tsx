@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/ui/page-intro";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -163,6 +164,32 @@ export default function AboutPage() {
           interest in BBVA, Santander and other technology-driven financial
           organisations.
         </p>
+      </section>
+      <section className="mt-16 border-t border-border pt-12">
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              Explore my work
+            </p>
+
+            <h2 className="mt-5 text-3xl font-semibold tracking-tight">
+              See how I apply software, data and AI in real projects
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-muted">
+              Explore my technical projects or contact me to discuss professional
+              opportunities, collaborations and technology-related ideas.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <ButtonLink href="/projects">View projects</ButtonLink>
+
+            <ButtonLink href="/contact" variant="secondary">
+              Contact me
+            </ButtonLink>
+          </div>
+        </div>
       </section>
     </div>
   );
