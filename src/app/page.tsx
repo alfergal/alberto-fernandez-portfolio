@@ -1,5 +1,6 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ProfessionalSummary } from "@/components/home/professional-summary";
 
 export default function HomePage() {
   return (
@@ -29,6 +30,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProfessionalSummary />
+      
       <FeaturedProjects />
     </>
   );
